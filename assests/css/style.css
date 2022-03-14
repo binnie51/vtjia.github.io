@@ -1,20 +1,14 @@
 * {
-    pading: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-section {
-    height: 500px;
-    background-color: darkgrey;
-    border: solid black 1px;
-}
-
-.hero {
-    background-color: dimgray;
-    height: 100vh;
-    color: azure;
-    font-size: 40px;
+header .top {
+    background-color: black;
+    height: 50px;
+    color:azure;
+    align-content: space-around;
 }
 
 footer {
@@ -36,10 +30,29 @@ ul {
     align-items: flex-end;
 }
 
-li{
+li {
     width: 200px;
     text-decoration: none;
 }
+
+
+.hero {
+    background-image: url("../images/photo.PNG");
+    background-color: #cccc;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    text-align: left;
+    top: 40%;
+    left: px;
+
+}
+
 /* header {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 30px;
