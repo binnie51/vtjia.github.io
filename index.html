@@ -11,20 +11,23 @@
         <link rel="stylesheet" href="./assests/css/style.css">
     </head>
     <body>
-        <header>
-            <section class="top">
-                <nav>
-                    <img id="logo" src="" alt="">
-                        <img src="" alt="">
+        <header id="home">
+           
+                <nav class="top">
+                    <div class="image-logo">
+                    <img id="logo" src="./assests/images/Logo_Website_-2.png" width="100px" height="100px" alt="logo-v">
                     </div>
+                    <div>
                     <ul>
-                        <li>Home</li>
+                        <li><a href="#home">Home</a></li>
                         <li><a href="#about-me">About Me</a></li>
-                        <li>Works</li>
+                        <li><a href="#my-works">Portfolio</a></li>
                         <li><a href="#contact-info">Contact</a></li>
                     </ul>
+                    </div>
                 </nav>
-            </section>
+           
+        </header>
             <section class="hero">
                 <div class="hero-text">
                     <h1>
@@ -32,30 +35,55 @@
                     </h1>
                     <div style="background-color:#000000; height:5px; width:100%;"></div>
                     <h3>This is my World</h3>
-                    <button class="enter-button">Enter</button>
+                    <button class="enter-button" onclick="window.open('https://github.com/binnie51','_blank');" type="button">Enter</button>
                     </div>
                 
             </section>    
-        </header>
+        
 
         <main>
-            <section id="about-me">
-                <h2>About Me</h2>
-                    <article class="dev-profile">
+            <section class="info" id="about-me">
+                <div class="photo-container">
+                    <img class="photo" src="./assests/images/profile-photo.png" alt="vincent-tjia-photo">
+                    </div>
+                    <div class="dev-profile">
+                        <h2>About Me</h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper est dui, sed lacinia elit dignissim vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi sem felis, fringilla id molestie lobortis, ullamcorper vitae orci. Aliquam auctor, lacus ac lobortis pretium, mi leo pellentesque augue, in dignissim massa nisi id est. Aenean gravida, tellus et molestie suscipit, ante augue lacinia tellus, et tempus quam ligula et justo. Donec diam est, condimentum sit amet justo a, euismod porttitor justo. Cras dignissim ultricies scelerisque. Curabitur eget est iaculis, pellentesque libero id, scelerisque ante. In a fringilla leo, non commodo odio. Suspendisse congue blandit lorem nec facilisis. Proin mollis, nibh at aliquet suscipit, erat nisl faucibus metus, fermentum hendrerit felis ipsum eu sapien. Pellentesque tempus mollis vulputate.
+                            Hello, my name is Vincent Tjia. I am a Web Developer and an illustrator from the good ol' "City of Brotherly Love" or Philly as the people know it. 
                         </p>
-                </article>
+                    </div>  
             </section>
-        <section id="my-works">
 
-        </section>
+            <section id="my-works" class="works">
+                <h2>My Works</h2>
+                    <div class="project-card">
+                        <img class="card-image" src="./assests/images/image-placeholder-500x500.png" alt="img-1">
+                        <h3>Project One</h3>
+                        <p class="">Lorem, ipsum dolor sit</p>
+                    </div>
+                    <div class="project-card">
+                        <img class="card-image" src="./assests/images/image-placeholder-500x500.png" alt="img-2">
+                        <h3>Project Two</h3>
+                        <p>Lorem ipsum dolor sit</p>
+                    </div>
+                    <div class="project-card">
+                        <img class="card-image" src="./assests/images/image-placeholder-500x500.png" alt="img-r3">
+                        <h3>Project Three</h3>
+                        <p>Lorem ipsum dolor sit</p>
+                    </div>
+            </section>
+
+
+
+
         </main>
+        
         <footer id="contact-info">
-
+            <h2>contact-me:</h2>
+            <p>vtjia51@gmail.com</p>
+        
+            <a href="mailto:tmsmith1150@live.com">Email Me</a>
+        
         </footer>
-
-        <!--JS script if used-->
-        <script src=""></script> 
     </body>
 </html>

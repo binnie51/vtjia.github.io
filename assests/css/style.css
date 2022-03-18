@@ -10,22 +10,43 @@
     font-family: 'Mulish', sans-serif;
 }
 
-header .top {
-    background-color:#1c1d25;
-    height: 80px;
-    color:azure;
-    align-content: space-around;
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    height: 120px;
+    background-color: 1c1d25;
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
-    height: 200px;
     background-color: black;
+    color: white;
+    text-align: center;
+    padding: 80px;
+
 }
 
-header nav {
+.top {
+    background-color: #1c1d25;
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    position: fixed;
+    width: 100%;
+    height: 220px;
+}
+
+.image-logo {
+    width: 100px;
+    height: 100px;
 }
 
 ul {
@@ -42,10 +63,27 @@ li {
     text-decoration: none;
 }
 
+/* .top {
+    background-color:#1c1d25;
+    height: 80px;
+    color:azure;
+    align-content: space-around;
+} */
+
+h2 {
+    font-weight: var(--f-bold);
+    font-size: 50px;
+    padding-bottom: 50px;
+}
+
+p {
+    margin: 0;
+    font-size: 30px;
+    font-weight: var(--f-primary);
+}
 
 .hero {
     display: flex;
-    flex-direction: column;
     background-image: url("../images/photo.PNG");
     background-color: #cccc;
     height: 600px;
@@ -60,7 +98,6 @@ li {
     text-align: left;
     top: 30%;
     left: 10%;
-    border: #1c1d25 10px;
     font-size: 50px;
     font-weight: var(--f-slim);
 }
@@ -83,7 +120,71 @@ li {
     opacity: 70%;
 }
 
+a{
+    text-decoration: none;
+    color: azure;
+}
+.photo {
+    border-radius: 150px;
+    padding: 30px;
+    margin-right: 20px;
+}
+
+.dev-profile {
+    padding: 30px;
+    margin: 30px;
+    border-left: solid azure 3px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+    background-color: #1c1d25;
+    color: azure;
+}
+
+.works {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px;
+    background-color: #1c1d25;
+    color: azure;
+}
+
+/* .card {
+    margin: 10px;
+    
+} */
+
+.project-card {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    
+    
+}
+
+.image-card {
+    margin-top: 25px;
+    width: 250px; 
+}
 
 
 
+@media only screen and (max-width: 980px) {
+    .hero {
+        opacity:  20%;
+    }
 
+    .hero-text {
+        opacity: 100%;
+    }
+    .photo {
+        width: 50%;
+        height: 50%;
+    }
+
+
+}
