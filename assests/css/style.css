@@ -18,8 +18,9 @@ html {
 }
 
 header {
-    height: 120px;
+    height: 110px;
     background-color: var(--bg-color);
+
 }
 
 main {
@@ -32,6 +33,12 @@ footer {
     color: white;
     text-align: center;
     padding: 80px;
+}
+
+h2 {
+    font-weight: var(--f-bold);
+    font-size: 50px;
+    padding-bottom: 50px;
 }
 
 ul {
@@ -49,39 +56,33 @@ li {
     text-decoration: none;
 }
 
-/* .top {
-    background-color:#1c1d25;
-    height: 80px;
-    color:azure;
-    align-content: space-around;
-} */
+p {
+    margin: 0;
+    font-size: 30px;
+    font-weight: var(--f-primary);
+}
 
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+/* Menus and logo styling */
 .top {
     background-color: var(--bg-color);
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    /* padding: 10px; */
     position: fixed;
     width: 100%;
-    height: 220px;
+    /* height: 220px; */
 }
 
 .image-logo {
     width: 100px;
     height: 100px;
     padding-left: 40px;
-}
-
-h2 {
-    font-weight: var(--f-bold);
-    font-size: 50px;
-    padding-bottom: 50px;
-}
-
-p {
-    margin: 0;
-    font-size: 30px;
-    font-weight: var(--f-primary);
 }
 
 .hero {
@@ -99,16 +100,19 @@ p {
     position: absolute;
     text-align: left;
     top: 30%;
-    left: 10%;
+    left: 5%;
     font-size: 50px;
     font-weight: var(--f-slim);
+    background-color: hsla(240, 37%, 91%, 0.75);
+    padding: 10px;
 }
 
 .hero-text strong{
     font-weight: var(--f-bold);
 }
 
-.enter-button {
+/* Styling button and psuedo elments when mouse is hovering */
+#enter-button {
     width: 200px;
     height: 55px;
     background-color: orange; /*temporary color*/
@@ -118,24 +122,15 @@ p {
     
 }
 
-.enter-button:hover {
-    opacity: 70%;
+[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
 }
 
-a{
-    text-decoration: none;
-    color: azure;
-}
-.photo {
-    border-radius: 150px;
-    padding: 30px;
-    margin-right: 20px;
-}
 
 .dev-profile {
-    padding: 30px;
-    margin: 30px;
-    border-left: solid azure 3px;
+    padding: 0px 0px 0px 30px;
+    margin: 0px  30px;
+    border-left: solid var(--text-color) 3px;
 }
 
 .info {
@@ -146,6 +141,7 @@ a{
     color: azure;
 }
 
+/* Portfolio container */
 .works {
     display: flex;
     flex-direction: column;
@@ -155,17 +151,23 @@ a{
     color: azure;
 }
 
-
+/* Project container */
 .project-card {
-    width: 400px;
+    width: 300px;
     height: 500px;
     border: 1px solid azure;
-    margin: 0px;
+    margin: 10px;
+}
+.card-image:hover {
+    opacity: 50%;
+    width: 300px;
+    height: 300px;
 }
 
 .project-container {
     display: flex;
     justify-content: space-around;
+    
 }
 
 .card-image {
@@ -173,23 +175,29 @@ a{
     margin-bottom: 30px;
 }
 
+#photo {
+    border-radius: 65px;
+    padding: 30px;
+    width: 500px;
+}
 
-/* media query so web is responsive to 980 px or smaller width */
+#email-here {
+    color: orange;
+}
+
+
+/* media query so app is responsive to 980 px or smaller width */
 @media only screen and (max-width: 980px) {
     h1 {
-        font-size: 80%;
+        font-size: 100%;
     }
 
     h2 {
-        font-size: 50px;
-    }
-    
-    h3 {
-        font-size: 60%;
+        font-size: 40px;
     }
 
     p {
-        font-size: 90%;
+        font-size: 100%;
     }
 
     button {
@@ -197,26 +205,99 @@ a{
     }
 
     .top {
-        height: 60px;
+        height: 100;
     }
     
     .hero {
-        opacity:  50%;
         height: 300px;
     }
     
+    .hero h3 {
+        font-size: 60%;
+    }
+    
+    .works {
+        padding: 0;
+    }
+
     .project-container {
-        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 80px;
     }
 
     .hero-text {
-            
-    }
-    
-    .photo {
-        width: 80%;
-        height: 80%;
+        top: 50px;
+        left: 110px;
     }
 
+    .dev-profile {
+        padding-left: 5px;
+        border: none;
+    }
+
+    #photo {
+        width: 250px;
+        border-radius: 0px;
+        padding: 0px;
+    }
+}
+
+/* media query so app is responsive to smaller devices */
+@media only screen and (max-width: 576px) {
+    header {
+        height: 80px;
+    }
     
+    ul {
+        padding: 20px;
+    }
+    .top {
+        height: 60px;
+    }
+
+    h2 {
+        font-size:x-large;
+        padding-bottom: 20px;
+    }
+
+    p {
+        font-size: small;
+    }
+
+    .hero-text {
+        top: 70px;
+        left: 30px;
+        font-size: 30px;
+        
+    }
+
+    .top a {
+        font-size: small;
+    }
+
+    #logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    #home-button {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: orange;
+        font-size: medium;
+    }
+
+    #enter-button{
+        width: 50%;
+        height: 0%;
+        font-size: medium;
+
+    }
+
+    #photo {
+        width: 150px;
+    }
 }
