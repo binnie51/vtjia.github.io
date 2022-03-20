@@ -19,10 +19,14 @@ THEN I am taken to that deployed application
 * WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 
-## Review
+## Screenshots
 
-You are required to submit BOTH of the following for review:
+### Desktop view (width > 980px):
+![app on the desktop - upper](screenshots/web-01.PNG)
+![app on the desktop - lower](screenshots/web-02.PNG)
 
-* The URL of the deployed application.
+ ### Width < max-width: 980px:
+ ![app on 980px or less](screenshots/web-980-1.PNG)
 
-* The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
+ ### Smaller devices (width <= 576px):
+ ![app on smaller devices](screenshots/sm-web-1.PNG)
