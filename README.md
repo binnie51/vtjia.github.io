@@ -30,3 +30,6 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
  ### Smaller devices (width <= 576px):
  ![app on smaller devices](screenshots/sm-web-1.PNG)
+ 
+ ## URL
+ https://vincent-tj.netlify.app/
