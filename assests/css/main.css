@@ -17,10 +17,22 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    width: 100%;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 100%;
+}
+
+section {
+    margin: 0px auto;
 }
 
 hr {
@@ -64,8 +76,10 @@ hr {
 
 /* main content: about me down to contact section */
 main {
-    display: flex;
-    flex-direction: column;
+    margin: 0px auto;
+    /* width: 100%; */
+    max-width: 1600px;
+    min-height: 100vh;
 }
 
 .nav-top {
@@ -86,7 +100,7 @@ main {
     justify-content:flex-start;
     align-items: center;
     transition: transform .75s;
-    filter: brightness(90%);
+    filter: brightness(80%);
     /* margin-left: 40px;  */
 }
 
@@ -102,6 +116,7 @@ main {
     width: 700px;  */
     margin-left: 80px;
     filter: none;
+    transition: none;
 }
 
 /* hero image enlarge a bit when cursor hover */
@@ -142,7 +157,12 @@ main {
     text-align: center;
 }
 
-/* style left social medias */
+.resumeBtn:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color2);
+}
+
+/* style social media icons and add links */
 .side-social-media {
     width: 40px;
     position: fixed;
@@ -157,6 +177,11 @@ main {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.social-med-list li {
+    display: list-item;
+    text-align: -webkit-match-parent;
 }
 
 .fa {
@@ -174,7 +199,7 @@ main {
 }
 
 .fa-github {
-background-color: #2c4762;
+background-color: #171515;
 color: white;
 }
 
@@ -185,6 +210,33 @@ color: white;
 
 .fa-envelope {
     font-size: 30px;
+    background-color: #1c1d25;
 }
 
 /* syle about me section */
+.about-container {
+    max-width: 900px;
+    /* padding: 100px 0px; */
+}
+
+.heading-about {
+    display: flex;
+    -webkit-box-align: center;
+    align-self: center;
+    position: relative;
+    margin: 10px 0px 40px;
+    width: 100%;
+    font-size: 30px;
+    /* white-space: nowrap; */
+}
+
+.inner {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+}
+
+.pofile-photo {
+    position: relative;
+    max-width: 300px;
+}
