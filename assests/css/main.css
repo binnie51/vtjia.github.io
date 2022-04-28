@@ -13,7 +13,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     margin: 0;
     padding: 0;
@@ -25,29 +24,42 @@ body {
 }
 
 hr {
+    display: block;
     height: 2px;
     border-width: 0;
     color: var(--bg-color);
     background-color: var(--bg-color);
 }
 /* style the header */
-header {
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     height: 100px;
-    background-color: var(--bg-color);
 }
 
-.nav-top ul {
+.nav-bar a {
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+.nav-top {
+    list-style: none;
     display: flex;
-    font-size: 20px;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding: 40px;
+    gap: 25px;
+}
+
+.image-logo {
+    margin-left: 50px;
 }
 
 .nav-top li {
-    width: 100px;
-    list-style-type: none;
+    width: 150px;
+    
     font-weight: var(--f-slim);
+    font-size: 20px;
 }
 
 /* main content: about me down to contact section */
@@ -62,10 +74,10 @@ main {
     color: var(--text-color);
 }
 
-/* style hero section */
+/* style hero section and its content */
 .hero-image {
     background-image: url("../images/photo.PNG");
-    max-width: 1600px;
+    width: 1600px;
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,33 +85,44 @@ main {
     display: flex;
     justify-content:flex-start;
     align-items: center;
+    transition: transform .75s;
+    filter: brightness(90%);
+    /* margin-left: 40px;  */
 }
 
 .hero-text {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     position: relative;
     background-color: hsla(240, 37%, 91%, 0.75);
-    padding: 20px;
+    padding: 30px;
     color: var(--bg-color);
     /* height: 500px;
     width: 700px;  */
-    /* margin-top: 190px; */
     margin-left: 80px;
+    filter: none;
+}
+
+/* hero image enlarge a bit when cursor hover */
+.hero-image:hover {
+    transform: scale(1.05);
 }
 
 .hero-text h1 {
     font-size: 50px;
     font-weight: var(--f-bold);
-    margin-bottom: 2rem;
+    margin: 0;
 }
 
 .hero-text h3 {
     font-size: 25px;
-    margin-bottom: 2rem;
+    font-weight: var(--f-secondary);
 }
 
 .hero-greeting {
     font-size: 20px;
+    margin: 0;
 }
 
 .hero-text span {
@@ -107,6 +130,61 @@ main {
     color: var(--text-color2);
 }
 
-.introBtn {
-
+.resumeBtn {
+    color: var(--bg-color);
+    background-color: #FF971A;
+    border-radius: 10px;
+    padding: 1.25rem 1.75rem;
+    font-size: 20px;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
 }
+
+/* style left social medias */
+.side-social-media {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 10;
+}
+
+.social-med-list {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-github {
+background-color: #2c4762;
+color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-envelope {
+    font-size: 30px;
+}
+
+/* syle about me section */
