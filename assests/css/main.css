@@ -6,6 +6,7 @@
     --bg-color: #1c1d25;
     --text-color: azure;
     --text-color2: #FF971A;
+    --transition-photo: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
 html {
@@ -34,12 +35,17 @@ section {
     margin: 0px auto;
 }
 
-hr {
-    display: block;
-    height: 2px;
-    border-width: 0;
-    color: var(--bg-color);
-    background-color: var(--bg-color);
+.line {
+    background-color:#000000;
+    height: 3px;
+    width: 100%;
+}
+
+footer {
+    background-color: black;
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
 }
 
 /* style the header navigation section */
@@ -53,15 +59,12 @@ hr {
 
 .nav-bar a {
     text-decoration: none;
-    color: inherit;
-    
 }
 
 .nav-top {
     list-style: none;
     display: flex;
     gap: 25px;
-    text-align: center;
 }
 
 .image-logo {
@@ -76,7 +79,7 @@ hr {
     cursor: pointer;
 }
 
- /* hover animation on the menu, don't work :( */
+/* hover animation on the menu, don't work :( */
 .menu-selection::after {
     content: '';
     width: 100%;
@@ -214,7 +217,6 @@ main {
 .social-med-list {
     display: flex;
     flex-direction: column;
-    -webkit-box-align: center;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -222,7 +224,6 @@ main {
 
 .social-med-list li {
     display: list-item;
-    text-align: -webkit-match-parent;
 }
 
 .fa {
@@ -233,6 +234,7 @@ main {
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .fa:hover {
@@ -252,18 +254,52 @@ color: white;
 .fa-envelope {
     font-size: 30px;
     background-color: #1c1d25;
+    color: white;
 }
 
 /* syle about me section */
+/* animate the border when user(s) hover on 'about me' section */
 .about-container {
     max-width: 900px;
-    /* padding: 100px 0px; */
+    margin-top: 80px;
+    padding: 20px 50px;
+    border: 1px solid var(--text-color);
+    position: relative;
 }
 
+.about-container::before,
+.about-container::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: inherit;
+    transition: all .5s;
+}
+
+.about-container::before {
+    top: -20px;
+    left: -20px;
+    border-width: 3px 0 0 3px;
+}
+
+.about-container::after {
+    bottom: -20px;
+    right: -20px;
+    border-width: 0 3px 3px 0;
+}
+
+.about-container:hover::before,
+.about-container:hover::after {
+    width: 50%;
+    height: 50%;
+}
+
+/* Styling 'Get to know me!' header text  */
 .heading-about {
     display: flex;
     -webkit-box-align: center;
-    align-self: center;
+    justify-content: flex-end;
     position: relative;
     margin: 10px 0px 40px;
     width: 100%;
@@ -271,13 +307,54 @@ color: white;
     /* white-space: nowrap; */
 }
 
+.heading-about::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: 20px;
+    width: 300px;
+    height: 1px;
+    margin-right: 20px;
+    background-color: var(--text-color);
+}
+
 .inner {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    gap: 40px;
+    gap: 50px;
 }
 
+/* styling photo and give overlay color */
 .pofile-photo {
     position: relative;
     max-width: 300px;
+}
+
+.overlay .wrapper {
+    transform: var(--transition-photo);
+    display: block;
+    position: relative;
+    width: 300px;
+    background-color: #6c6155;
+}
+
+.overlay .wrapper .pofile-photo {
+    position: relative;
+    mix-blend-mode: multiply;
+    filter: grayscale(100%) contrast(1);
+    transition: var(--transition-photo);
+}
+
+/* style works/portfolio section */
+.work-section-container {
+    margin-top: 80px;
+}
+
+
+/* media queries */
+@media (max-width: 1080px) {
+    .side-social-media {
+        left: auto;
+        right: 20px;
+    }
 }

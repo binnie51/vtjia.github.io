@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Vincent Tjia</title>
         <!--Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,9 +22,9 @@
                     <div class="menu">
                         <ul class="nav-top">
                             <li><a href="#home" class="menu-selection"></a>Home</li>
-                            <li><a href="#" class="menu-selection"></a>About</li>
-                            <li><a href="#" class="menu-selection"></a>Work</li>
-                            <li><a href="#" class="menu-selection"></a>Contact</li>
+                            <li><a href="#about" class="menu-selection"></a>About</li>
+                            <li><a href="#works" class="menu-selection"></a>Work</li>
+                            <li><a href="#contact" class="menu-selection"></a>Contact</li>
                         </ul>
                     </div>
                 </nav>
@@ -34,7 +34,7 @@
                 <div class="hero-text">
                     <h3 class="hero-greeting">Hi, my name is</h3>
                     <h1><span>V</span>incent <span>T</span>jia</h1>
-                    <hr>
+                    <div class="line"></div>
                     <h3>Front-End Developer, Illustrator, Designer</h3>
                     <a class="resumeBtn" href="#" target="_blank" rel="noreferrer">View my resume</a>
                 </div>
@@ -44,41 +44,49 @@
                 <ul class="social-med-list">
                     <li><a href="https://github.com/binnie51" class="fa fa-github" target="_blank"></a></li>
                     <li><a href="www.linkedin.com/in/vincent-tjia-5ab2751b8" class="fa fa-linkedin" target="_blank"></a></li>
-                    <li><i class="fa fa-envelope" href="mailto:vtjia51@gmail.com" target="_blank"></i></li>
+                    <li><a href="mailto:vtjia51@gmail.com" target="_blank"><i class="fa fa-envelope" ></i></a></li>
                 </ul>
             </div>
             
             <main>
-                <div class="about-container">
+                <div class="about-container" id="about">
                     <h2 class="heading-about">Get to Know Me!</h2>
                     <div class="inner">
-                        <img class="pofile-photo" src="./assests/images/profile-photo.png">
-                        <article>
-                            <p>
-                                I'm a front-end developer with background in art and design.  
-                                My pursue of creativity began as an artistic child who loves to doodle on his notebooks.
-                                Then, I discovered digital art when I acquire my first drawing tablet. Ever since,
-                                my fascniation of turning creative thoughts digital have led me to study choose art and design in high school and college.
-                                I eventually took interest in programming as I could utilize my multilingual and artistic background
-                                to solve problems and produce creative results. I'm from Philadelphia.
-                            </p>
-                            <p>
-                                Here are some of technical skills I've acquired:
-                            </p>
-                            <ul class="skill-list">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>Jquery</li>
-                                <li>Basic Python</li>
-                                <li>Basic Java</li>
-                                <li>SQL</li>
-                            </ul>
-                        </article>
+                        <div class="overlay">
+                            <div class="wrapper">
+                                <img class="pofile-photo" src="./assests/images/profile-photo.png">
+                            </div>
+                        </div>
+                        <div class="info-about">
+                            <div class="background-story">
+                                <p>
+                                    I'm a front-end developer with background in art and design.  
+                                    My pursue of creativity began as an artistic child who loves to doodle on his notebooks.
+                                    Then, I discovered digital art when I acquire my first drawing tablet. Ever since,
+                                    my fascniation of turning creative thoughts digital have led me to study art and design in high school and college.
+                                    I eventually took interest in programming as I could utilize my multilingual and artistic background
+                                    to solve problems and produce creative results. I'm from Philadelphia.
+                                </p>
+                            </div>
+                            <div class="skills">
+                                <p>
+                                    Here are some of technical skills I've acquired:
+                                </p>
+                                <ul class="skill-list">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Jquery</li>
+                                    <li>Basic Python</li>
+                                    <li>Basic Java</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <section class="work-continer">
+                <section class="work-section-container" id="works">
                     <h2>Works</h2>
                     <div class="project-container">
                         <div class="project-card1">
@@ -106,7 +114,7 @@
                     </div>
                 </section>
 
-                <section class="contact-container">
+                <section class="contact-container" id="contact">
                     <h2>How to Reach Me?</h2>
                     <p>
                         Please click the button below to send me emails for inquiry and job opportunity.
@@ -128,7 +136,6 @@
         src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src="./assests/js/main.js"></script>
     </body>
 </html>
