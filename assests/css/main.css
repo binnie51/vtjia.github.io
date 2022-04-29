@@ -16,7 +16,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -46,6 +46,7 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 20px;
+    
 }
 
 /* style the header navigation section */
@@ -57,33 +58,37 @@ footer {
     height: 100px;
 }
 
-.nav-bar a {
-    text-decoration: none;
-}
-
 .nav-top {
     list-style: none;
-    display: flex;
-    gap: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    /* gap: 25px; */
 }
 
 .image-logo {
     margin-left: 50px;
 }
 
+
 .nav-top li {
     width: 150px;
-    position: relative;
-    font-weight: var(--f-slim);
-    font-size: 20px;
-    cursor: pointer;
+    /* position: relative; */
 }
 
-/* hover animation on the menu, don't work :( */
+.menu-selection {
+    display: inline-block;
+    margin-block: 2px;
+    text-decoration: none;
+    font-weight: var(--f-slim);
+    position: relative;
+    color: var(--text-color);
+}
+
+/* hover animation on the menu  */
 .menu-selection::after {
     content: '';
     width: 100%;
-    height: 1px;
+    height: 2px;
     background-color: var(--text-color2);
     border-radius: 4px;
     position: absolute;
@@ -168,7 +173,7 @@ main {
     color: var(--text-color2);
 }
 
-.resumeBtn {
+.myResumeBtn {
     color: var(--bg-color);
     background-color: #FF971A;
     border-radius: 10px;
@@ -180,16 +185,16 @@ main {
     cursor: pointer;
     text-align: center;
     overflow: hidden;
-    transition:  color 1s;
+    transition:  color 1.5s;
     /* display: inline-block; */
 }
 
-.resumeBtn:hover {
+.myResumeBtn:hover {
     background-color: var(--bg-color);
     color: var(--text-color2);
 }
 
-.resumeBtn::before {
+.myResumeBtn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -202,7 +207,7 @@ main {
     transition: width 1;
 }
 
-.resumeBtn:hover::before {
+.myResumeBtn:hover::before {
     width: 150%;
 }
 
@@ -260,7 +265,7 @@ color: white;
 /* syle about me section */
 /* animate the border when user(s) hover on 'about me' section */
 .about-container {
-    max-width: 900px;
+    max-width: 1000px;
     margin-top: 80px;
     padding: 20px 50px;
     border: 1px solid var(--text-color);
@@ -321,7 +326,7 @@ color: white;
 .inner {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    gap: 50px;
+    /* gap: 20px; */
 }
 
 /* styling photo and give overlay color */
@@ -334,20 +339,63 @@ color: white;
     transform: var(--transition-photo);
     display: block;
     position: relative;
-    width: 300px;
+    width: 400px;
     background-color: #6c6155;
 }
 
-.overlay .wrapper .pofile-photo {
+.overlay .wrapper img {
     position: relative;
     mix-blend-mode: multiply;
-    filter: grayscale(100%) contrast(1);
+    filter: grayscale(90%) contrast(1);
+    transition: var(--transition-photo);
+}
+
+/* animation on the picture when hovered, not yet worked */
+.overlay .wrapper::before {
+    top: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    mix-blend-mode: screen;
+}
+
+.overlay .wrapper::after {
+    border: var(--text-color2);
+    top: 20px;
+    left: 20px;
+    z-index: -1;
+}
+
+.overlay .wrapper::before,
+.overlay .wrapper::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     transition: var(--transition-photo);
 }
 
 /* style works/portfolio section */
 .work-section-container {
     margin-top: 80px;
+    max-width: 1000px;
+}
+
+/* stryling each project card */
+/* responsive card that response to media query  */
+.project-card1 {
+    width: 50rem;
+    background-color: #6c6155;
+    color: var(--text-color);
+    padding: 1.5rem;
+}
+
+.card-image1 {
+    object-fit: cover;
+}
+
+.project-title1 {
+    font: 3rem;
 }
 
 
