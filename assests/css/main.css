@@ -6,7 +6,7 @@
     --bg-color: #1c1d25;
     --text-color: azure;
     --text-color2: #FF971A;
-    --transition-photo: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    --transition-photo:  all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
 html {
@@ -390,17 +390,20 @@ color: white;
 /* stryling each project card */
 
 .project-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
     width: 90%;
 }
 
-.project-container2 {
+.pro-wrapper {
     display: flex;
-    margin: 20px;
     flex-direction: row;
+    align-items: flex-end;
 }
 
+.project-container2 {
+    margin: 10px;
+}
 .work-header {
     display: flex;
     -webkit-box-align: center;
@@ -422,10 +425,8 @@ color: white;
     background-color: var(--text-color);
 }
 
-.sub-heading {
-    display: block;
-}
-
+/* syle each cards on the and add animations to each one */
+/* first featured project will be bigger than the rest and it'll have a unique hover animation */
 .project-card1 {
     width: 440px;
     height: 300px;
@@ -503,8 +504,8 @@ color: white;
 
 .link-list .link-portfolio {
     position: absolute;
-    right: 5px;
-    bottom: 15px;
+    right: 17px;
+    bottom: 14px;
     padding: 20px;
     font-size: 20px;
     width: 20px;
@@ -528,6 +529,43 @@ color: white;
 .contact-container {
     margin-top: 80px;
     margin-bottom: 80px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.contact-header {
+    display: block;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.contact-container .email-link {
+    color: var(--text-color2);
+    background-color: transparent;
+    border: 3px solid var(--text-color2);
+    border-radius: 5px;
+    padding: 1.25rem 1.75rem;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+/* add hover animation to button */
+.email-link {
+    display: inline-block;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.email-link:hover {
+    animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+    0%{
+        box-shadow: 0 0 25px #9F9B80;
+    }
 }
 
 /* media queries */
