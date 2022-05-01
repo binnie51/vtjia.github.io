@@ -1,8 +1,11 @@
 # Personal Portfolio Website
-
 I thought about building my portfolio website to showcase my skills and what types of services I offer. This website will enable employers to see the types of projects I have accomplished in my webdev carrer. This website will be undergoing many stages as my knowledge in Web development grow.  
-
-Acceptance Criteria
+## Technologies
+* HTML 
+* CSS
+* JavaScript 
+* Jquery
+## Acceptance Criteria
 Here are the critical requirements necessary to develop a portfolio that satisfies a typical hiring manager’s needs:
 
 GIVEN I need to sample a potential employee's previous work:
@@ -18,18 +21,24 @@ THEN that application's image should be larger in size than the others
 THEN I am taken to that deployed application
 * WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
-
 ## Screenshots
+### Ver 2.0
+![top-hero](screenshots/web-ver2.0_1.PNG)
 
-### Desktop view (width > 980px):
+![about-portfolio](screenshots/web-ver2.0_2.PNG)
+### Ver 1.0
+#### Desktop view (width > 980px):
 ![app on the desktop - upper](screenshots/web-01.PNG)
-![app on the desktop - lower](screenshots/web-02.PNG)
 
- ### Width < max-width: 980px:
+ #### Width < max-width: 980px:
  ![app on 980px or less](screenshots/web-980-1.PNG)
 
- ### Smaller devices (width <= 576px):
+ #### Smaller devices (width <= 576px):
  ![app on smaller devices](screenshots/sm-web-1.PNG)
  
  ## URL
  https://vincent-tj.netlify.app/
+
+## License
+Copyright (c) Vincent Tjia. All rights reserved.
+License under MIT.

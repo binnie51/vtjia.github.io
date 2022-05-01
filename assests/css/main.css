@@ -351,7 +351,7 @@ color: white;
 .overlay .wrapper img {
     position: relative;
     mix-blend-mode: multiply;
-    filter: grayscale(90%) contrast(1);
+    filter: grayscale(50%) contrast(1);
     transition: var(--transition-photo);
 }
 
@@ -414,11 +414,16 @@ color: white;
     font-size: 30px;
 }
 
+.sub-work-header {
+    text-align: center;
+    font-weight: var(--f-secondary);
+}
+
 .work-header::after {
     content: "";
     display: block;
     position: relative;
-    top: 5px;
+    top: 0px;
     width: 500px;
     height: 1px;
     margin-left: 20px;
@@ -427,8 +432,10 @@ color: white;
 
 /* syle each cards on the and add animations to each one */
 /* first featured project will be bigger than the rest and it'll have a unique hover animation */
-.project-card1 {
-    width: 440px;
+
+/* this is targetting the first application card */
+.project-card1 { 
+    width: 470px;
     height: 300px;
     padding: 1.5rem;
     background-color: #333;
@@ -501,7 +508,6 @@ color: white;
     color: var(--text-color);
 }
 
-
 .link-list .link-portfolio {
     position: absolute;
     right: 17px;
@@ -516,15 +522,16 @@ color: white;
 
 .link-list2 .link-portfolio-sm {
     position: absolute;
-    right: 5px;
+    right: 10px;
     bottom: 8px;
     padding: 20px;
-    font-size: 10px;
+    font-size: 15px;
     width: 5px;
     border-radius: 0;
     text-align: center;
     text-decoration: none;
 }
+
 /* syling contact section */
 .contact-container {
     margin-top: 80px;
@@ -537,6 +544,7 @@ color: white;
     display: block;
     margin-bottom: 20px;
     padding: 20px;
+    font-size: 30px;
 }
 
 .contact-container .email-link {
@@ -551,7 +559,7 @@ color: white;
     margin-top: 50px;
 }
 
-/* add hover animation to button */
+/* add hover animation to email button */
 .email-link {
     display: inline-block;
     color: var(--text-color);
@@ -568,10 +576,30 @@ color: white;
     }
 }
 
+
 /* media queries */
 @media (max-width: 1080px) {
     .side-social-media {
         left: auto;
         right: 20px;
+    }
+}
+
+/* hamburger menu pops up once window's width < 1000px */
+.hamburger{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hamburger {
+        display: block;
+        border: 0;
+        background-color: transparent;
+        color: var(--text-color);
+        font-size: 30;
+    } 
+
+    .nav-top {
+        display: none;
     }
 }
