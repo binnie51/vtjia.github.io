@@ -25,20 +25,18 @@ THEN I am presented with a responsive layout that adapts to my viewport
 ### Ver 2.0
 ![top-hero](screenshots/web-ver2.0_1.PNG)
 
-![about-portfolio](screenshots/web-ver2.0_2.PNG)
+![about-portfolio](screenshots\web-var2.0_2.PNG)
 ### Ver 1.0
 #### Desktop view (width > 980px):
 ![app on the desktop - upper](screenshots/web-01.PNG)
 
- #### Width < max-width: 980px:
- ![app on 980px or less](screenshots/web-980-1.PNG)
+#### Width < max-width: 980px:
+![app on 980px or less](screenshots/web-980-1.PNG)
 
- #### Smaller devices (width <= 576px):
- ![app on smaller devices](screenshots/sm-web-1.PNG)
- 
- ## URL
- https://vincent-tj.netlify.app/
-
+#### Smaller devices (width <= 576px):
+![app on smaller devices](screenshots/sm-web-1.PNG) 
+## URL
+Deployed:https://binnie51.github.io/vtjia.github.io/
 ## License
 Copyright (c) Vincent Tjia. All rights reserved.
 License under MIT.
