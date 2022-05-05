@@ -75,6 +75,10 @@ footer {
     /* position: relative; */
 }
 
+.nav-top.show {
+    display: block;
+}
+
 .menu-selection {
     display: inline-block;
     margin-block: 2px;
@@ -590,6 +594,10 @@ color: white;
     display: none;
 }
 
+.hamburger:focus {
+    outline: 0;
+}
+
 @media only screen and (max-width: 1000px) {
     .hamburger {
         display: block;
@@ -599,7 +607,7 @@ color: white;
         font-size: 30;
     } 
 
-    .nav-top {
+    ul.nav-top {
         display: none;
     }
 }
